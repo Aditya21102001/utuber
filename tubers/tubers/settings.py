@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'yrjsgf8xs33%6j8=c59q_7--9$*f+&2wcnt$u+xnss+3$*d(t&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["adutubers.herokuapp.com", "127.0.0.1"]
 
 LOGIN_REDIRECT_URL='dashboard'
 
@@ -142,5 +142,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'tubers/static')
 
 ]
-
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 SITE_ID = 1
